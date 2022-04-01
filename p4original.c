@@ -1,22 +1,24 @@
-#include<stdio.h>
+ #include <stdio.h>
 int input()
 {
   int n;
-  printf("enter the values of n:\n");
+  printf("enter value of n:\n");
   scanf("%d",&n);
   return n;
-  }
+}
 int find_fibo(int n)
 {
-  int n1=0,n2=1,i,fibo;
-  for(i=0;i<n-1;i++)
+  int fibo=0;
+  int a=0;
+  int b=1;
+  for(int i=0;i<=n;i++)
     {
-      fibo=n1+n2;
-      n1=n2;
-      n2=fibo;
+      fibo=a;
+      a=b;
+      b=fibo+b;
     }
   return fibo;
-  }
+}
 void output(int n,int fibo)
 {
   printf("%d\n",fibo);
@@ -28,4 +30,4 @@ int main()
   fibo=find_fibo(n);
   output(n,fibo);
   return 0;
-  }    
+}
