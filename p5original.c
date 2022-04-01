@@ -13,20 +13,19 @@ void init_array(int n, int a[n])
       a[i]=i+1;
     }
 }
-void erotosthenes_sieve(int n, int a[n])
+void erotosthenes_sieve(int n,int a[n])
 {
-    for (int i=1;i<=n;i++)
+  for(int i=1;i<n;i++)
     {
-      for (int k=2;k<a[i];k++)
+      for(int k=2;k<a[i];k++)
         {
-          if (a[i]%k==0)
-          {
-            a[i]=0;
-            break;
-          }
-        }
-    }
+          if(a[i]%k==0)
+      a[i]=0;
+      break;
+      }
+  }
 }
+
 void out_put(int n, int a[n])
 {
   for (int i=1;i<n;i++)
